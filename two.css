@@ -1,0 +1,41 @@
+body{
+    background:rgba(49, 49, 49, 0.829);
+    font-family:arial;
+}
+
+#gameContainer{
+    text-align:center;
+}
+
+#gameBoard{
+    border: 3px solid;
+    border-radius: 4px;
+}
+
+#scoreText{
+    font-size:100px;
+    color:aliceblue;
+}
+
+#resetBtn{
+    color:white;
+    background-color: rgb(0, 102, 255);
+    padding:10px 20px;
+    font-size:20px;
+    border:none;
+    border-radius: 20px;
+    font-weight:bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#resetBtn:hover{
+    background:rgb(0, 102, 255);
+    opacity: 0.8;
+}
+
+#resetBtn:active{
+    background:rgb(0, 102, 255);
+    opacity: 0.6;
+}
+

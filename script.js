@@ -1,7 +1,7 @@
 const mic_btn = document.querySelector("#mic");
 const playback = document.querySelector(".playback");
 
-mic_btn.addEventListener("click", toggleMic);
+mic_btn.addEventListener("click", toggleMic); //dont know toggleMic
 
 let can_record = false;
 let is_recording = false;
@@ -10,7 +10,7 @@ let recorder = null;
 
 let chunks = [];
 
-function setUpAudio() {
+function setUpAudio() {  //don't know any thing from here
     console.log("Setup");
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         navigator.mediaDevices
@@ -25,9 +25,9 @@ function setUpAudio() {
 setUpAudio();
 
 function setUpStream(stream) {
-    recorder = new MediaRecorder(stream);
+    recorder = new MediaRecorder(stream);  //don't know MediaRecorder
     
-    recorder.ondataavailable = e => {
+    recorder.ondataavailable = e => {  // don't know ondataavailable
         chunks.push(e.data);
     }
 
@@ -35,7 +35,7 @@ function setUpStream(stream) {
         const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
         chunks = [];
         const audioURL = window.URL.createObjectURL(blob);
-        playback.src = audioURL;
+        playback.src = audioURL; //don't know any
     }
 
     can_record = true;
